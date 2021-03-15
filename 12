@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+double toHop(int n,int k){
+    int an=1;
+    int ank=1;
+    int ak=1;
+    for(int i=1;i<=n;i++){
+        an*=i;
+    }
+    for(int i=1;i<=n-k;i++){
+        ank*=i;
+    }
+    for(int i=1;i<=k;i++){
+        ak*=i;
+    }
+    return an/(ank*ak);
+}
+int main(){
+    int n,k;
+    cin >>n>>k;
+    while(n!=-1 && k!=-1){
+    cout <<toHop(n,k)<<endl;
+    cin >>n>>k;
+    }
+}
