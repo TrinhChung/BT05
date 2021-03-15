@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+string nhiPhan(int n){
+    int nguyen=n;
+    string s;
+    while(nguyen!=0){
+        s+=(char)(nguyen%2+48);
+        nguyen=nguyen/2;
+    }
+    string v=s;
+    for(int i=s.size()-1;i>=0;i--){
+        v[s.size()-1-i]=s[i];
+    }
+    return v;
+}
+int main(){
+ int n;
+ cin >>n;
+ cout <<nhiPhan(n);
+}
