@@ -1,0 +1,15 @@
+#include<iostream>
+#include<ctime>
+#include<stdlib.h>
+using namespace std;
+int randomNumber(int n){
+    return rand()%n;
+}
+int main(){
+    srand(time(NULL));
+    int n;
+    cin >>n;
+    for(int i=0;i<n;i++){
+        cout <<randomNumber(n)<<" ";
+    }
+}
