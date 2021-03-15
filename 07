@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+string spacebar(int n){
+   string s;
+   for(int i=0;i<n;i++){
+    s+=" ";
+   }
+   return s;
+}
+string star(int n){
+    string s;
+    for(int i=0;i<n;i++){
+        s+="*";
+    }
+    return s;
+}
+int main(){
+    int k=1;
+   for(int i=1;i<=5;i++){
+       cout <<spacebar((9-k)/2);
+       cout <<star(k)<<endl;
+       k+=2;
+   }
+}
