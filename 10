@@ -1,0 +1,29 @@
+#include<iostream>
+#include<ctime>
+#include<stdlib.h>
+using namespace std;
+int randomNumber(){
+    return rand()%50;
+}
+void selectNumber(int a[],int n){
+    for(int i=0;i<n;i++){
+        for(int j=i;j<n-1;j++){
+            for(int z=j;z<n;z++){
+                if((a[i]+a[z]+a[j])%25==0){
+                    cout <<a[i]<<" "<<a[j]<<" "<<a[z]<<endl;
+                }
+            }
+        }
+    }
+}
+int main(){
+    srand(time(NULL));
+    int n;
+    cin >>n;
+    int a[n];
+    for(int i=0;i<n;i++){
+        a[i]=randomNumber();
+    }
+    selectNumber(a,n);
+}
+
